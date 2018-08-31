@@ -1,0 +1,2 @@
+rm approvedQuestions.csv
+rm questionIdsAndWorksheetTitles.csv
