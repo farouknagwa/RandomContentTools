@@ -72,4 +72,6 @@ makeTableFromCSVData(cursor, "qcd", qcd)
 makeTableFromCSVData(cursor, "sif", sif)
 makeTableFromCSVData(cursor, "wie", wie)
 
+cursor.execute("CREATE TABLE lessons (LessonID integer, LessonTitle text, NumberOfQuestions integer, WorksheetName1 text, WorksheetName2 text, WorksheetName3 text)")
+
 connection.close()
