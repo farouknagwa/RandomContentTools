@@ -3,3 +3,7 @@
 *.xlsx
 .idea/*
 chemistryWorksheetTitles.txt
+3DGraphing/bin/*
+3DGraphing/include/*
+3DGraphing/lib/*
+3DGraphing/pyvenv.cfg

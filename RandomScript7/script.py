@@ -91,12 +91,6 @@ def realLessons(cursor):
 connection = sqlite3.connect("Database/nagwa.db")
 cursor = connection.cursor()
 
-cursor.execute("SELECT lie.LessonID, lie.LessonTitle, lie.WorksheetId, lie.Subject, lie.gvalue, lie.Live, llqpq.QuestionID, qcd.WorksheetName FROM lie LEFT JOIN llqpq ON lie.LessonID = llqpq.LessonID LEFT JOIN qcd ON llqpq.QuestionID = qcd.QuestionID WHERE lie.Subject = 'Physics' AND lie.gvalue < 11")
-
-rows = cursor.fetchall()
-
-# print tabulate(rows)
-
 print
 
 print "Worksheets used in lesson that aren't in the tracker: {0}".format(", ".join( rogueWorksheets(cursor)))
@@ -123,6 +117,8 @@ print [x for x in gcseLessons if x not in names]
 
 rows = unlinkedPhysicsQuestions(cursor)
 rows = [r for r in rows if r[1] in gcseWorksheets]
+
+writeListAsCSV(rows, "uq.csv")
 
 print tabulate(rows)
 
