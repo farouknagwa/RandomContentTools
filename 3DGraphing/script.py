@@ -5,7 +5,7 @@ import math
 
 G = 6.67 * 10 ** -11  # Universal Gravitational Constant
 rho = 5510  # Density of Earth
-image = 4
+image = 1
 
 
 def sigmoid(x, a, b):
